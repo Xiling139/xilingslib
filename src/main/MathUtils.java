@@ -18,7 +18,19 @@ public class MathUtils {
         return (a >= b) ? a : b;
     }
 
+    public static long xiMax(long a, long b) {
+        return (a >= b) ? a : b;
+    }
+
+    public static double xiMax(double a, double b) {
+        return (a >= b) ? a : b;
+    }
+
     public static int xiMin(int a, int b) {
+        return (a <= b) ? a : b;
+    }
+
+    public static long xiMin(long a, long b) {
         return (a <= b) ? a : b;
     }
 
