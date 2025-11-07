@@ -51,15 +51,18 @@ public class MathUtils {
         if (value == 0) return 0;
         if (value == 1) return 1;
 
+        int iter = 0;
+        final int maxIter = 1000;
         double inf = (value > 1) ? 1 : value;
         double sup = (value > 1) ? value : 1;
-        while (sup - inf > 1e-10) {
+        while (sup - inf > 1e-15 * value && iter < maxIter) {
             double guess = (sup + inf) / 2;
             if (guess * guess < value) {
                 inf = guess;
             }
             else
                 sup = guess;
+            iter++;
         }
         double infSquared = inf * inf;
         double supSquared = sup * sup;

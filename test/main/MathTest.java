@@ -28,6 +28,6 @@ public class MathTest {
 
     @Test
     void testXiSqrt() {
-        assertEquals(Math.sqrt(2), MathUtils.xiSqrt(2), 1e-10);
+        assertEquals(Math.sqrt(2), MathUtils.xiSqrt(2), 1e-13);
     }
 }
